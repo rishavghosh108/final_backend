@@ -1,6 +1,6 @@
 from werkzeug.security import generate_password_hash
 from datetime import datetime,timedelta
-import jwt,os,random,vonage
+import jwt,os,random
 from core.libs.assertions import assert_found,assert_valid
 from twilio.rest import Client
 

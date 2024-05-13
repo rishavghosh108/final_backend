@@ -11,8 +11,6 @@ from core.apis.systemapi import _System
 
 app.register_blueprint(_System,url_prefix="/system")
 
-# CORS(app, resources={r"*": {"origins": "*"}}, methods=['POST','GET'], expose_headers=['Content-Type','Access-Control-Allow-Origin','auth','verification'])
-
 CORS(
     app,
     resources={r"*": {"origins": "*"}},
