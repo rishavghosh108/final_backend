@@ -7,10 +7,10 @@ export authorization_secret_key='authorizationtoken'
 export authorization_header_key='auth'
 export forget_token_key='Forget'
 
-flask db init
-# flask db stamp heads
-# flask db migrate -m "Initial migration."
-# flask db upgrade
+# flask db init
+flask db stamp heads
+flask db migrate -m "Initial migration."
+flask db upgrade
 
 # Run server
 gunicorn -c gunicorn_config.py core.server:app
