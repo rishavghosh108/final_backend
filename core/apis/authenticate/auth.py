@@ -43,7 +43,6 @@ def Decript(token, secret_key):
     return payload
 
 def Authorization(email):   #used for login
-    # send_email()
     exp_time=SetTime(60)
     payload={"email":email,"expire":exp_time}
     return Gen(payload,os.getenv('authorization_secret_key'))
@@ -85,22 +84,27 @@ def SendOtp(no,otp):
 
 
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+# import smtplib
+# from email.mime.text import MIMEText
+# from email.mime.multipart import MIMEMultipart
 
-def send_email():
-    sender_email = 'rishav@rishav.com'
-    receiver_email = 'rishavghosh147@gmail.com'
-    subject = 'Test Email'
-    body = 'Hello, this is a test email sent from my custom SMTP server!'
+# def send_email():
+#     sender_email = 'rishav@bengalinstituteoftechnology.online'
+#     receiver_email = 'rishavghosh147@gmail.com'
+#     subject = 'Test Email'
+#     body = 'Hello, this is a test email sent from my custom SMTP server!'
 
-    msg = MIMEMultipart()
-    msg['From'] = sender_email
-    msg['To'] = receiver_email
-    msg['Subject'] = subject
-    msg.attach(MIMEText(body, 'plain'))
+#     msg = MIMEMultipart()
+#     msg['From'] = sender_email
+#     msg['To'] = receiver_email
+#     msg['Subject'] = subject
+#     msg.attach(MIMEText(body, 'plain'))
 
-    with smtplib.SMTP('localhost', 25) as server:
-        server.sendmail(sender_email, receiver_email, msg.as_string())
+#     with smtplib.SMTP('0.0.0.0', 25) as server:
+#         server.sendmail(sender_email, receiver_email, msg.as_string())
 
+# Call the function to send the email
+# send_email()
+
+# Keep the event loop running
+# asyncio.get_event_loop().run_forever()

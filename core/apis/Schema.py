@@ -30,3 +30,11 @@ class Signup_Schema(Schema):
 
 class Otp_Schema(Schema):
     otp=fields.Integer(required=True, validate=validate_otp)
+
+class EmailSchema(Schema):
+    id = fields.Integer(dump_only=True)
+    sender = fields.Email(required=True)
+    recipient = fields.Email(required=True)
+    subject = fields.Str(required=True)
+    body = fields.String(required=True)
+    created_at = fields.DateTime(dump_only=True)

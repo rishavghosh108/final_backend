@@ -8,8 +8,10 @@ from core.libs.exceptions import ProjectError
 import os
 
 from core.apis.systemapi import _System
+from core.apis.mailsapi import _App
 
 app.register_blueprint(_System,url_prefix="/system")
+app.register_blueprint(_App)
 
 CORS(
     app,
