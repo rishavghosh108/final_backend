@@ -24,9 +24,9 @@ def send():
 
     try:
         server = smtplib.SMTP(smtp_server, smtp_port)
-        server.starttls()
+        # server.starttls()
         # server.login(sender_email, sender_password)
-        server.sendmail(sender_email, receiver_email, msg.as_string())
+        # server.sendmail(sender_email, receiver_email, msg.as_string())
         server.quit()
         return "Email sent successfully"
     except Exception as e:
