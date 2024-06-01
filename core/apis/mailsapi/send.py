@@ -1,5 +1,4 @@
 from flask import Blueprint
-from core.apis.decoretor import authorization_payload
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -7,7 +6,6 @@ from email.mime.text import MIMEText
 _Send=Blueprint('send',__name__)
 
 @_Send.route('/send',methods=['GET'])
-@authorization_payload
 def send():
     smtp_server = '52.23.17.251'
     smtp_port = 587
