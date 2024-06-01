@@ -16,3 +16,6 @@ _App.register_blueprint(_Spam)
 
 from .bin import _Bin
 _App.register_blueprint(_Bin)
+
+from .send import _Send
+_App.register_blueprint(_Send)
