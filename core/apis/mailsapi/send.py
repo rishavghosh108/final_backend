@@ -7,11 +7,11 @@ _Send=Blueprint('send',__name__)
 
 @_Send.route('/send',methods=['GET'])
 def send():
-    smtp_server = "52.23.17.251"
-    smtp_port = 587
+    smtp_server = "52.23.17.251"  # IP address of your SMTP server
+    smtp_port = 1025  # Port where your custom SMTP server is running
     sender_email = 'rishav@bengalintituteoftechnology.online'
     receiver_email = 'rishavghosh147@gmail.com'
-    # sender_password = 'your_password'  # Use environment variables for better security
+    sender_password = 'your_password'  # Use environment variables for better security
 
     subject = 'API Triggered Email'
     body = 'This email was sent because the API was accessed.'
@@ -24,9 +24,7 @@ def send():
 
     try:
         server = smtplib.SMTP(smtp_server, smtp_port)
-        # server.starttls()
-        # server.login(sender_email, sender_password)
-        # server.sendmail(sender_email, receiver_email, msg.as_string())
+        server.sendmail(sender_email, receiver_email, msg.as_string())
         server.quit()
         return "Email sent successfully"
     except Exception as e:
