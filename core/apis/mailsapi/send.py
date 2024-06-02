@@ -7,7 +7,7 @@ _Send=Blueprint('send',__name__)
 
 @_Send.route('/send',methods=['GET'])
 def send():
-    smtp_server = '52.23.17.251'
+    smtp_server = "52.23.17.251"
     smtp_port = 587
     sender_email = 'rishav@bengalintituteoftechnology.online'
     receiver_email = 'rishavghosh147@gmail.com'
