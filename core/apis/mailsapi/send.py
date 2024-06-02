@@ -23,7 +23,9 @@ def send():
     msg.attach(MIMEText(body, 'plain'))
 
     try:
+        print(f"Connecting to SMTP server {smtp_server} on port {smtp_port}")
         server = smtplib.SMTP(smtp_server, smtp_port)
+        server.set_debuglevel(1)  # Enable debug output
         server.sendmail(sender_email, receiver_email, msg.as_string())
         server.quit()
         return "Email sent successfully"
