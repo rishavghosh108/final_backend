@@ -64,7 +64,7 @@ def GenOtp(no):
 def SendOtp(no,otp):
 
     try:
-        client = Client('ACcaf7a150a4784ee72ad43b47e741d20c', '6513338df6e29512db0c743d27ebf1ed')
+        client = Client('ACb6a39fb9ab31679e5e6b6bfad0eb2c27', '318c85e9f36ca0fca852969f86db713e')
 
         message = client.messages.create(
             from_="+14843024845",
