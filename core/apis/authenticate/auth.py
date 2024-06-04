@@ -57,6 +57,7 @@ def Decrept_email(token):
 
 def GenOtp(no):
     otp=random.randint(1000,9999)
+    print(otp)
     SendOtp("+91"+f"{no}", otp)
     return otp
 

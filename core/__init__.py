@@ -10,3 +10,4 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= True
 
 db=SQLAlchemy(app)
 migrate=Migrate(app,db)
+# app.test_client()
